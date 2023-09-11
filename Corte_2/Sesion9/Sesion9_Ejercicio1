@@ -1,0 +1,58 @@
+import random as r
+
+
+def main():
+    pass
+    
+
+
+def matriz(filas, columnas):
+    matriz = []
+    for i in range(filas):
+        matriz.append([])
+        for j in range(columnas):
+            num=r.randint(1, 100)  
+            matriz[i].append(num)
+
+    for i in matriz:
+        print(i)
+
+    return matriz
+
+
+
+def num_maximo(matriz):
+    numeros = [numero for fila in matriz for numero in fila]
+    maximo = max(numeros)
+    return maximo
+
+
+def num_minimo(matriz):
+    numeros = [numero for fila in matriz for numero in fila]
+    minimo = max(numeros)
+    return minimo
+    
+
+def num_ordenados(matriz):
+    numeros=[numero for fila in matriz for numero in fila]
+    numeros.sort(reverse=True)
+    return numeros
+
+
+
+
+
+if __name__=="__main__":
+    filas=int(input('Ingrese el numero de filas: '))
+    columnas=int(input('Ingrese el numero de columnas: '))
+    matriz_creada=matriz(filas,columnas)
+    
+    nmaximo=num_maximo(matriz_creada)
+    nminimo=num_minimo(matriz_creada)
+    print(f'el numero maximo de la matriz es',nmaximo)
+    print(f'el numero minimo de la matriz es',nminimo)
+    
+    numeros_ordenados=num_ordenados(matriz_creada)
+    print(numeros_ordenados)
+
+    main()
