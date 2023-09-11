@@ -1,3 +1,5 @@
+
+
 def divisores_numero():
     numero = int(input("Ingrese un número: "))
     
@@ -31,3 +33,26 @@ def serie_fibonacci():
         print(a, end=", ")
         a, b = b, a + b
     print()
+
+# Menú de inicio
+while True:
+    print("Menú de Inicio")
+    print("1. Mostrar divisores de un número")
+    print("2. Calcular producto entre dos números enteros")
+    print("3. Mostrar serie de Fibonacci")
+    print("4. Salir")
+    
+    opcion = int(input("Bienvenido, seleccione una opción: "))
+    
+    if opcion == 1:
+        divisores_numero()
+    elif opcion == 2:
+        producto_enteros()
+    elif opcion == 3:
+        serie_fibonacci()
+    elif opcion == 4:
+        print("Gracias por haberlo probado")
+        break
+    else:
+        print("Esa opción no existe.")
+
